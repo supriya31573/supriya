@@ -3,46 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Index Page</title>
+    <title>Hello this is an Interactive Web Page created by supriya</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
         header {
             background-color: #4CAF50;
             color: white;
             padding: 1em;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            margin-top: 1em;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d4d4d4;
         }
         main {
-            padding: 1em;
+            margin-top: 5em;
+            padding: 2em;
+            text-align: center;
         }
         footer {
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
-            text-align: center;
             padding: 1em;
+            text-align: center;
+            width: 100%;
             position: fixed;
             bottom: 0;
-            width: 100%;
+        }
+        .content {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .button {
+            padding: 1em 2em;
+            font-size: 1em;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>I am learning Ansible with Abhishek Veeramalla</h1>
+        <h1>Interactive Web Page</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
     <main>
-        <h2>Ansible Zero to Hero Series</h2>
-        <p> This is my First Ansible Playbook, Where I learnt how to deploy a static app on ec2 instance using Ansible. </p>
-        <p>For more information, visit www.youtube.com/abhishekveeramalla</p>
+        <div class="content">
+            <p>Welcome to this interactive web page deployed on an EC2 instance.</p>
+            <button class="button" onclick="showAlert()">Click Me!</button>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 Abhishek.Veeramalla</p>
+        <p>&copy; 2024 Interactive Web Page. All rights reserved.</p>
     </footer>
+    <script>
+        function showAlert() {
+            alert("Button clicked!");
+        }
+    </script>
 </body>
 </html>
